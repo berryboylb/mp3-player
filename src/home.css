@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    height:  100vh;
+    background: rgba(243, 3, 3, 0.87);
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    
+    z-index: 3;
+    padding: 3%;
+}
+
+.divide {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    width: 50%;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-top: 15%;
+    margin-left: 7%;
+    z-index: 2;
+}
+
+.content p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 7%;
+    line-height: 2;
+    z-index: 2;
+}
+
+.content a {
+    margin-left: 7%;
+    margin-top: 10%;
+    color: #fff;
+    text-decoration: none;
+    background: #d30303;
+    padding: 2%;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.content a:hover {
+    background: #fff;
+    color: rgba(243, 3, 3, 0.87);
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
+    /* background: seashell; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    object-fit: cover;
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+}
+
+/* Nav bar styles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+    width: 90%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%);
+}
+
+nav form {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav form button {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    background: #d30303;
+    padding: 2%;
+    border-radius: 10px;
+    width: 15%;
+}
+
+nav form button:hover {
+    background: #fff;
+    color: rgba(243, 3, 3, 0.87);
+}
+
+nav form input {
+    outline: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: none;
+    padding: 2%;
+    width: 80%;
+}
+
+nav form input::placeholder {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 1%;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    color: rgba(243, 3, 3, 0.87);
+}
+
+nav ul li:hover {
+    background: #fff;
+    font-size: small;
+    border-radius: 15px;
+}
