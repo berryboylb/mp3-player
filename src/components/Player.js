@@ -17,7 +17,6 @@ const Player = (props) => {
     });
 
     const SkipSong = (forwards = true) => {
-
         if (forwards) {
             
             props.setCurrentSongIndex(() => {
@@ -43,7 +42,6 @@ const Player = (props) => {
             });
         }
     }
-    
 
 
     return ( 

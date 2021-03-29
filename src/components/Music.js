@@ -89,7 +89,7 @@ const Music = () => {
             return currentSongIndex + 1;
           }
         });
-      }, [currentSongIndex]);
+      }, [currentSongIndex, songs.length]);
 
 
 
