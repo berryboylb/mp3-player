@@ -1,22 +1,36 @@
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { ReactComponent as CloseMenu } from "../close.svg";
+import { ReactComponent as MenuIcon } from "../menu.svg";
 
-const Navbar = () => {
-        
-    return ( 
+import { Link } from 'react-router-dom';
+
+import "../header.css";
+
+const Navbar  = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
+
+    return (
         <nav>
-            <form>
-                <button type = 'submit'>Search</button>
-                <input id = 'myColor' type = 'search' />
-            </form>
-
-            <ul>
-                <li><Link>About</Link></li>
-                <li><Link>Music</Link></li>
-                <li><Link>New</Link></li>
-                <li><Link>Contact</Link></li>
+        <div className="title"><h3>Trap Card</h3></div>
+            <ul className={click ? "nav-active" : "navlist"}>
+                <li><Link to="/music">Music</Link></li>
+                <li><Link to="/about">PlayList</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
-        </nav>
-     );
-}
- 
-export default Navbar;
+        <div className="menu">
+        <button className="my-nav-icon" onClick={handleClick}>
+          {click ? (
+            <CloseMenu className="my-menu-icon" />
+          ) : (
+            <MenuIcon className="my-menu-icon" />
+          )}
+        </button>
+        </div>
+    </nav>
+    );
+  };
+  
+  export default Navbar;
+  

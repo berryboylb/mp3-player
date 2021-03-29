@@ -1,0 +1,79 @@
+.my-navbar{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: rgb(216, 121, 136);    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.my-nav{
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -ms-flex-pack: center !important;
+    justify-content: center ;
+
+}
+.my-nav-list{
+    padding-left: 0;
+    list-style: none;    
+}
+.my-nav-item{
+    padding-left: 20px;
+    padding-right: 5px;
+ 
+}
+.my-navbar a{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (min-width: 992px){
+    .my-nav-icon{
+        display: none;
+    }
+    .my-nav-list{
+        display: flex;
+    }
+}
+@media screen and (max-width: 992px){
+    .my-nav-icon{
+        display: inline-block;
+        margin-left: auto;
+     
+    }
+    .my-nav-icon{
+        background: none;
+        outline: none;
+        border: none;
+        margin-top: 10px;
+    }
+    .my-nav{
+        display: flex;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+  
+    }
+    .my-nav.active{
+        left: 0;
+        opacity: 1;
+        z-index: 1;
+        align-content: center;
+        padding-left: 0px;
+        height: auto;
+    }
+    .my-nav-list{
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+
+}

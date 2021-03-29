@@ -88,7 +88,7 @@ header {
 
 /* Nav bar styles */
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     height: 30px;
@@ -114,7 +114,7 @@ nav form button {
     background: #d30303;
     padding: 2%;
     border-radius: 10px;
-    width: 15%;
+    width: 70px;
 }
 
 nav form button:hover {
@@ -164,4 +164,365 @@ nav ul li:hover {
     background: #fff;
     font-size: small;
     border-radius: 15px;
+} */
+
+
+nav {
+    height: 50px;
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
+
+.title h3 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.navlist {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlist li {
+    /* display: inline; */
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.navlist li a:hover {
+    color: rgba(243, 3, 3, 0.87);
+}
+
+nav ul li:hover {
+    padding: 2%;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.line0 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.line1 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.line2 {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.nav-active {
+    position: absolute;
+    background: rgba(243, 3, 3, 0.8);
+    height: 90vh;
+    width: 100%;
+    right: 0; 
+    left: 0;
+    bottom: 0;
+     top: 10vh;
+     z-index: 9999999999999;
+     display: flex;
+     justify-content: space-evenly;
+     flex-direction: column;
+     align-items: center;
+}
+
+.nav-active li {
+    /* display: inline; */
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-active li a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+
+}
+
+.nav-active li a:hover {
+    color: rgba(243, 3, 3, 0.87);
+}
+
+.toggle .line0 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    margin-top: 5px;
+}
+
+.toggle .line1 {
+    opacity: 0;
+}
+
+.toggle .line2 {
+    transform: rotate(45deg) translate(-6px, -6px);
+    margin-top: 6px;
+    
+}
+
+
+@media screen and (max-width:1024px) {
+    .navlist {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        justify-content: space-between;
+        height: 8vh;
+        padding: 5%;
+    }
+
+    .menu {
+        display: block ;
+    }
+    
+    .navlist {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .divide {
+        height: 100vh;
+        width: 100%;
+       
+    }
+
+    .content {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+    }
+    .content h2  {
+        margin-left: 0;
+        margin-top: 5%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .content p {
+        margin-left: 0;
+        margin-top: 5%;
+        font-size: 18px;
+        line-height: 2;
+        text-align: center;
+        display: block;
+    }
+
+    .content a {
+        display: block;
+        margin-left: 50%;
+        margin-top: 5%;
+        margin-right: 50%;
+        transform: translate(-50%);
+        font-size: 16px;
+        padding: 3%;
+        width: 50%;
+        text-align: center;
+    }
+    .image-container {
+        display: none;
+    }
+
+}
+
+/* about starts here */
+
+.about {
+    width: 100%;
+    height: 100vh;
+    background: rgba(243, 3, 3, 0.87);
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    padding: 3%;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.about h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.host-con {
+    text-align: center;
+    width: 30%;
+    margin-top: 1%;
+    background: #fff;
+    color: rgba(243, 3, 3, 0.6);
+     border-radius: 10px;
+     padding: 2%;
+     margin-left: 50%;
+     margin-right: 50%;
+     transform: translate(-50%);
+     border: 1px solid rgb(218, 17, 17);
+     /* box-shadow: 4px 4px 10px rgba(252, 44, 8, 0.568),
+    -4px -4px 10px rgba(131, 8, 8, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 10px rgba(241, 36, 9, 0.712); */
+}
+
+.host {
+    padding: 1%;
+}
+
+.host:hover {
+    background: rgba(243, 3, 3, 0.87);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.host h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.host p {
+    font-size: 16px;
+}
+
+@media screen and (max-width:1024px) {
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .about h1 {
+        font-size: 20px;
+    }
+
+    .host-con {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+        transform: translate(0);
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .host h3 {
+        font-size: 16px;
+    }
+
+    .host p {
+        font-size: 14px;
+    }
+}
+
+/* contact started here */
+.contact {
+    height: 100vh;
+    width: 100%;
+    background: rgba(243, 3, 3, 0.87);
+    overflow: hidden !important;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+}
+
+.contact h3 {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.icons {
+    padding: 2%;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icons a {
+    font-size: 25px;
+    text-decoration: none;
+    color: rgba(243, 3, 3, 0.87);
+    padding: 3%;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.icons a:hover {
+    background: rgba(243, 3, 3, 0.87);
+    color: #fff;
+}
+
+.icons a:active {
+    font-size: 20px;
+}
+
+@media screen and (max-width:1024px){
+    .contact {
+        padding: 5%;
+    }
+    .contact h3 {
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        padding: 3%;
+        line-height: 1.5;
+    }
+
+    .icons {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .icons a {
+        font-size: 20px;
+        padding: 2%;
+    }
+}
+
+
+
