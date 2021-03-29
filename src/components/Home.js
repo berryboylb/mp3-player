@@ -1,7 +1,7 @@
 import music from './mussic.png';
 import circle from './circle.svg';
 import { Link } from 'react-router-dom';
-import home from '../home.css';
+import '../home.css';
 import Navbar from './Navbar';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPlay} from '@fortawesome/free-solid-svg-icons';

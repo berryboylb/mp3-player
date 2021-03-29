@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import home from '../home.css';
+import '../home.css';
 import circle from './circle.svg';
 
 

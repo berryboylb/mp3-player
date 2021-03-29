@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import circle from './circle.svg';
-import home from '../home.css';
+import  '../home.css';
 const About = () => {
 
     const [songs] = useState([

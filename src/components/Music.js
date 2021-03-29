@@ -1,4 +1,4 @@
-import music from '../music.css';
+import '../music.css';
 import { useState, useEffect } from "react";
 import Player from './Player';
 
@@ -83,13 +83,13 @@ const Music = () => {
 
     useEffect(() => {
         setNextSongIndex(() => {
-            if(currentSongIndex + 1 > songs.length - 1) {
-                return 0;
-            }else {
-                return currentSongIndex + 1;
-            }
+          if (currentSongIndex + 1 > songs.length - 1) {
+            return 0;
+          } else {
+            return currentSongIndex + 1;
+          }
         });
-    }, [currentSongIndex]);
+      }, [currentSongIndex]);
 
 
 
