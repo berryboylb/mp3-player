@@ -1,18 +1,24 @@
 import PlayerControls from "./PlayerControls";
 import PlayerDetails from "./PlayerDetails";
+import '../music.css';
 
 import {useEffect, useState, useRef} from 'react';
+
+
 
 const Player = (props) => {
 
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isPending, setIsPending] = useState(true);
 
     useEffect(() => {
         if (isPlaying) {
+            setIsPending(false);
             audioEl.current.play();
         } else {
-            audioEl.current.pause();
+            setIsPending(true);
+            audioEl.current.pause();  
         }
     });
 
@@ -45,14 +51,16 @@ const Player = (props) => {
 
 
     return ( 
-        <div className = "c-player">
+        <div className = "c-player" >
+            {isPending && <div class="loader"></div> }
             <audio src = {props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <h4 className = "Play">Playing Now</h4>
             <PlayerDetails song ={props.songs[props.currentSongIndex]} />
             <PlayerControls 
             isPlaying = {isPlaying} 
             setIsPlaying = {setIsPlaying} 
-            SkipSong = {SkipSong} />
+            SkipSong = {SkipSong} 
+            />
             <p className="theme"><strong>Next Track :</strong> {props.songs[props.nextSongIndex].title } by {props.songs[props.nextSongIndex].artist }</p>
         </div>
      );
