@@ -50,10 +50,24 @@ const Player = (props) => {
     }
 
 
+    // function getPercentProg() {
+    //     var myVideo = document.getElementById('myAudio');
+    //     var endBuf = myVideo.buffered.end(0);
+    //     var soFar = parseInt((endBuf / myVideo.duration) * 100);
+    //     if (soFar > 0  || soFar < 100){
+            
+    //     }else {
+    //         setIsPending(true);
+    //     }
+    // }
+
+    // getPercentProg();
+
+
     return ( 
         <div className = "c-player" >
             {isPending && <div class="loader"></div> }
-            <audio src = {props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
+            <audio src = {props.songs[props.currentSongIndex].src} ref={audioEl} id = "myAudio"></audio>
             <h4 className = "Play">Playing Now</h4>
             <PlayerDetails song ={props.songs[props.currentSongIndex]} />
             <PlayerControls 
