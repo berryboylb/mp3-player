@@ -20,7 +20,7 @@ const Player = (props) => {
             setIsPending(true);
             audioEl.current.pause();  
         }
-    });
+    }, [isPlaying]);
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -66,7 +66,7 @@ const Player = (props) => {
 
     return ( 
         <div className = "c-player" >
-            {isPending && <div class="loader"></div> }
+            {isPending && <div className="loader"></div> }
             <audio src = {props.songs[props.currentSongIndex].src} ref={audioEl} id = "myAudio"></audio>
             <h4 className = "Play">Playing Now</h4>
             <PlayerDetails song ={props.songs[props.currentSongIndex]} />
